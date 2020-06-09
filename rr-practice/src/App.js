@@ -3,23 +3,23 @@ import './App.css';
 
 class App extends Component {
 
-  state = {
-    age: 21
-  }
+  // state = {
+  //   age: 21
+  // }
 
-  onAgeUp = () => {
-    let age = this.state.age
-    this.setState({
-      age: ++age
-    })
-  }
+  // onAgeUp = () => {
+  //   let age = this.state.age
+  //   this.setState({
+  //     age: ++age
+  //   })
+  // }
 
-  onAgeDown = () => {
-    let age = this.state.age
-    this.setState({
-      age: --age
-    })
-  }
+  // onAgeDown = () => {
+  //   let age = this.state.age
+  //   this.setState({
+  //     age: --age
+  //   })
+  // }
 
   render() {
     return (
@@ -31,6 +31,13 @@ class App extends Component {
         </div>
       </div>
     );
+  }
+}
+
+const mapDispatchToProps=(dispatch)=>{
+  return{
+    onAgeUp: ()=>dispatch({type:'AGE_UP'}),
+    onAgeDown: () => dispatch({ type: 'AGE_DOWN' })
   }
 }
 
