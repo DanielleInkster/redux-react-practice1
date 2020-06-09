@@ -15,13 +15,20 @@ class App extends Component {
       })
     }
 
+    onAgeDown = () => {
+      let age = this.state.age
+      this.setState({
+        age: --age
+      })
+    }
+
   render () {
     return (
       <div className="App">
         <div className="App">
           <div>Age: <span>{this.state.age}</span></div>
           <button onClick={this.onAgeUp}>Age Up</button>
-          <button>Age Down</button>
+          <button onClick = {this.onAgeDown}>Age Down</button>
         </div>
       </div>
     );
