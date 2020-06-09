@@ -34,7 +34,13 @@ class App extends Component {
   }
 }
 
-const mapDispatchToProps=(dispatch)=>{
+const mapStateToProps = (dispatch) => {
+  return {
+    age: state.age
+  }
+}
+
+const mapDispatchToProps=(state)=>{
   return{
     onAgeUp: ()=>dispatch({type:'AGE_UP'}),
     onAgeDown: () => dispatch({ type: 'AGE_DOWN' })
